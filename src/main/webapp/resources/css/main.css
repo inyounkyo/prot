@@ -1,0 +1,380 @@
+@charset "utf-8";
+
+/* 메인 :: 비주얼 */
+#mainVisual{position:relative; width:100%; overflow:hidden;}
+#mainVisual .visual-item{position:relative; width:100%; overflow:hidden;}
+#mainVisual .visual-item > img{
+	width:100%;
+	-ms-transform: scale(1.2,1.2); /* IE 9 */
+    -o-transform: scale(1.2,1.2); /* IE 9 */
+    -moz-transform: scale(1.2,1.2); /* IE 9 */
+    -webkit-transform: scale(1.2,1.2); /* Chrome, Safari, Opera */
+     transform: scale(1.2,1.2);
+	-webkit-transition:transform 5000ms  ease-in-out ; /* Safari */
+	-moz-transition:transform 5000ms ease-in-out ; /* Safari */
+	-o-transition:transform 5000ms ease-in-out ; /* Safari */
+	-ms-transition:transform 5000ms ease-in-out ; /* Safari */
+    transition:transform 5000ms ease-in-out ;
+}
+#mainVisual .visual-item:focus{outline:none;}
+#mainVisual .visual-txt{position:absolute; bottom:10%; left:6%;  }
+#mainVisual .visual-inner-txt{border-left:1px solid rgba(255,255,255,0.3); padding-left:22px; color:#fff; padding-bottom:30px;}
+#mainVisual .visual-inner-txt h2,#mainVisual .visual-inner-txt strong,#mainVisual .visual-inner-txt span,#mainVisual .visual-inner-txt  p{
+	display:block;
+	opacity:0;filter:Alpha(opacity=0);
+	-moz-transform:translateX(10%);  
+	-ms-transform:translateX(10%);  
+	transform:translateX(10%);  
+	-moz-transition:all 0.5s;
+	-ms-transition:all 0.5s;
+	transition:all 0.5s;
+}
+#mainVisual .visual-inner-txt strong{padding:40px 0 15px; font-size:20px; font-weight:300; transition-delay:0.2s; line-height:25px}
+#mainVisual .visual-inner-txt span{font-size:13px; font-weight:300; transition-delay:0.4s}
+#mainVisual .visual-inner-txt p{padding-top:15px; line-height:24px;  transition-delay:0.6s}
+#mainVisual .visual-txt a{margin-left:23px; color:#fff; padding:0 42px 5px 0; background:url(/images/icon/more_btn_bg.png) no-repeat 0 100%; 
+	opacity:0;filter:Alpha(opacity=0);
+	transition:all 0.5s 0.8s;
+}
+/* active */
+#mainVisual .visual-item.active > img{
+	-ms-transform: scale(1,1); /* IE 9 */
+    -o-transform: scale(1,1); /* IE 9 */
+    -moz-transform: scale(1,1); /* IE 9 */
+    -webkit-transform: scale(1,1); /* Chrome, Safari, Opera */
+    transform: scale(1,1);
+}
+#mainVisual .active .visual-inner-txt h2,
+#mainVisual .active .visual-inner-txt strong,
+#mainVisual .active .visual-inner-txt span,
+#mainVisual .active .visual-inner-txt  p{
+	-moz-transform:translateX(0);  
+	-ms-transform:translateX(0);  
+	transform:translateX(0);  
+}
+#mainVisual .active .visual-inner-txt h2,
+#mainVisual .active .visual-inner-txt strong,
+#mainVisual .active .visual-txt a{
+	opacity:1.0;filter:Alpha(opacity=100);
+}
+#mainVisual .active .visual-inner-txt span{
+	opacity:0.73;filter:Alpha(opacity=73); 
+}
+#mainVisual .active .visual-inner-txt  p{
+	opacity:0.54;filter:Alpha(opacity=54);
+}
+
+
+#mainVisual .slick-arrow{
+	position:absolute; bottom:10%; margin-bottom:270px;width:63px; height:59px; left:6%; background:none; border:0; cursor:pointer; z-index:99; font-size:0; 
+	-webkit-transition:all 300ms;-moz-transition:all 300ms;-o-transition:all 300ms;-ms-transition:all 300ms;transition:all 300ms
+}
+#mainVisual .slick-arrow.slick-prev{background:url(/images/button/main_visual_prev_btn.png) no-repeat}
+#mainVisual .slick-arrow.slick-next{margin-left:70px; background:url(/images/button/main_visual_next_btn.png) no-repeat}
+#mainVisual .scroll-icon{position:absolute; bottom:32px; left:50%; width:72px; margin-left:-36px; text-align:center;}
+#mainVisual .scroll-icon span{display:block; color:#fff; font-weight:300; font-size:10px; opacity:0.75;filter:Alpha(opacity=75); margin-bottom:15px;}
+/* 메인 :: 라이트바 */
+#rightBar{position:fixed; top:50%; right:3%; z-index:99; width:42px; padding:10px 0; margin-top:-132px; background-color:rgba(0,0,0,0.37); text-align:center;}
+#rightBar a{color:#fff;}
+#rightBar > ul {padding:0 13px; background:url(/images/layout/right_nav_line.png) repeat-y 50% 50%}
+#rightBar > ul > li{position:relative; padding:25px 0;}
+#rightBar > ul > li .bullet{display:block; width:10px; height:10px; margin:0px auto; background-color:#0060a1; -webkit-border-radius:10px;-moz-border-radius:10px;-o-border-radius:10px;border-radius:10px;}
+#rightBar > ul > li p{overflow:hidden; position:absolute; top:18px; right:0px; width:225px; 
+	opacity:0;filter:Alpha(opacity=0); transform:translateX(10px);  -webkit-transform:translateX(10px);
+	-webkit-transition:all 300ms;-moz-transition:all 300ms;-o-transition:all 300ms;-ms-transition:all 300ms;transition:all 300ms
+}
+#rightBar > ul > li a:hover p,#rightBar > ul > li.on a p{opacity:1.0;filter:Alpha(opacity=100); transform:translateX(0); -webkit-transform:translateX(0px);}
+#rightBar > ul > li p strong, #rightBar > ul > li p span{float:left; width:50%; height:26px; line-height:26px; color:#fff; font-weight:300; text-align:center;}
+#rightBar > ul > li p strong{background-color:rgba(0,0,0,0.5); font-size:13px;}
+#rightBar > ul > li p span{background-color:#0060a1; font-size:11px;}
+.i-font{color:#fff; font-size:25px;}
+.to-top-btn{font-size:10px;}
+/* 메인 컨텐츠 공통 */
+#mainContent{padding:65px 0 0 0;}
+.content-tit{color:#1c1a1a; padding-bottom:36px; letter-spacing:-0.5px; font-size:28px; font-weight:200; -webkit-transition:all 0.4s;-moz-transition:all 0.4s;-o-transition:all 0.4s;-ms-transition:all 0.4s;transition:all 0.4s}
+.content-tit strong{font-weight:400;}
+/* 메인 :: 사업 종류 */
+#mainBusinessCon .content-tit{text-align:center; background:url(/images/main/main_business_tit_bg.jpg) no-repeat 50% 6px}
+#businessList ul{overflow:hidden; padding:53px 0 86px}
+#businessList ul li{
+	overflow:hidden; float:left; position:relative; width:23.5%; margin-left:2%;
+	opacity:0;filter:Alpha(opacity=0);
+	/*-moz-transform:translateY(-20%);
+	-ms-transform:translateY(-20%);
+	transform:translateY(-20%);*/
+	top:-20%;
+	-moz-transition:top 1.0s, opacity 1.0s;
+	-ms-transition:top 1.0s, opacity 1.0s;
+	transition:top 1.0s, opacity 1.0s;
+}
+#businessList ul li:first-child{margin-left:0;}
+#businessList ul li.active{
+	opacity:1.0;filter:Alpha(opacity=100);
+	top:0%;
+	/*-moz-transform:translateY(0);
+	-ms-transform:translateY(0%);
+	transform:translateY(0%);*/
+}
+#businessList ul li a{display:block; position:relative; overflow:hidden; padding-top:182%;}
+#businessList ul li .bg-thum{position: absolute; top: 0; left: 0; right: 0; bottom: 0;}
+#businessList ul li .bg-thum img{
+	position: absolute; top: 0; left: 0; max-width: 100%; height: 100%; 
+	-webkit-transition:all 0.4s;-moz-transition:all 0.4s;-o-transition:all 0.4s;-ms-transition:all 0.4s;transition:all 0.4s
+}
+#businessList ul li .business-tit{position:absolute; top:30px; left:15px; z-index:1; color:#fff;}
+#businessList ul li .business-tit span{display:block; height:30px; opacity:0.8;filter:Alpha(opacity=80);}
+#businessList ul li .business-tit strong{display:block; font-weight:400; font-size:16px; padding-top:5px; }
+#businessList ul li .over-cover{
+	position:absolute; top:0px; left:0px; width:100%; height:100%; visibility:hidden; opacity:0;filter:Alpha(opacity=0);
+	background-color:rgba(0,0,0,0.6); z-index:1;  box-sizing:border-box; border:10px solid #0e60ac;
+	-webkit-transition:all 0.4s;-moz-transition:all 0.4s;-o-transition:all 0.4s;-ms-transition:all 0.4s;transition:all 0.4s
+}
+#businessList ul li .over-cover img{position:absolute; top:50%; left:50%; margin:-18px 0 0 -18px; transform:rotate(-45deg) scale(0.7);  -moz-transform:rotate(-45deg) scale(0.7); opacity:0;filter:Alpha(opacity=0);
+	-webkit-transition:all 0.4s 0.1s;-moz-transition:all 0.4s 0.1s;-o-transition:all 0.4s 0.1s;-ms-transition:all 0.4s 0.1s;transition:all 0.4s 0.1s;
+}
+#businessList ul li a:hover .bg-thum img{ -webkit-transform:scale(1.2); -moz-transform:scale(1.2); transform:scale(1.2);}
+#businessList ul li a:hover .over-cover{visibility:visible; opacity:1.0;filter:Alpha(opacity=100);}
+#businessList ul li a:hover .over-cover img{transform:rotate(0deg) scale(1.0);  -moz-transform:rotate(0deg) scale(1.0); opacity:1.0;filter:Alpha(opacity=100);}
+/* 메인 :: 사업 링크 */
+#businessResultLink{padding-bottom:150px;}
+#businessResultLink h3{float:left; width:28%; letter-spacing:-0.75px; line-height:74px; color:#272727; font-weight:300; font-size:44px;}
+#businessResultLink h3 strong{font-weight:500}
+#businessResultLink h3 a{display:inline-block; width:50px; height:22px; margin-left:5%; text-align:center; line-height:22px; background-color:#3c3c3c; color:#fff; font-size:11px; letter-spacing:0px; vertical-align:middle;}
+#businessResultLink .result-link-list{float:left; width:72%; }
+#businessResultLink .result-link-list li{float:left; width:32%; margin-left:2%; height:76px; text-align:center;}
+#businessResultLink .result-link-list li a{display:block; border:1px solid #c2c2c2; line-height:74px;  color:#272727; font-size:20px; letter-spacing:-0.5px; font-weight:300;
+	-webkit-transition:all 0.4s;-moz-transition:all 0.4s;-o-transition:all 0.4s;-ms-transition:all 0.4s;transition:all 0.4s
+}
+#businessResultLink .result-link-list li:first-child{margin-left:0;}
+#businessResultLink .result-link-list li a:hover{background-color:#f1f1f1; border-color:#0e60ac}
+/* 메인 :: 네트워크 */
+#mainNetworkCon{overflow:hidden; position:relative; width:100%; padding:110px 0; background-color:#d7e1e5;}
+.global-list-con{width:328px;}
+.global-list-con li{overflow:hidden; padding-top:35px;}
+.global-list-con .more{ width:100px; border:1px solid #000; text-align:center; color:#000; opacity:0.6;filter:Alpha(opacity=60); padding:10px 0; margin-top:20px}
+.global-list-con li:first-child{padding-top:0;}
+.global-list-con li .national-flag{float:left; width:64px; height:42px; margin-right:20px;}
+.global-list-con li .national-tit{float:left; display:table;}
+.global-list-con li .national-tit strong{height:42px; display:table-cell; vertical-align:middle; font-weight:400; color:#242424; line-height:18px; font-size:12px;}
+/* 메인 :: 글로벌 맵 */
+#mainGlobalMapCon{position:absolute; top:0px; left:50%; width:100%; margin-left:-272px; background-color:#242a33; height:100%;}
+#globalMapInner{padding:110px 43px; width:829px;}
+.map-inner-top{overflow:hidden; padding-bottom:60px;}
+.map-inner-top h3{border-bottom:1px solid #575b62; color:#fff; letter-spacing:-0.5px; padding-bottom:35px; margin-bottom:35px;}
+.map-inner-top h3 strong{font-size:35px; font-weight:400; margin-right:20px;}
+.map-inner-top h3 span{font-weight:300; opacity:0.66;filter:Alpha(opacity=66);}
+.map-inner-txt{float:left; width:67%; color:#fff; font-size:14px; letter-spacing:-0.25px; line-height:28px; opacity:0.6;filter:Alpha(opacity=60); }
+.map-inner-content{position:relative;}
+.mobile-img{display:none;}
+.map-kr-marker{position:absolute; top:171px; left:304px;width:130px; height:70px;}
+.map-kr-marker .kr-tit{float:left; color:#fff; font-size:15px; line-height:40px;}
+.kr-round-ani{position:relative; float:left; width:70px; height:70px;
+	transform:rotate(90deg) translateX(20px);
+	-webkit-transform:rotate(90deg) translateX(20px);
+}
+.kr-round-ani span{
+	display:block; position:absolute; top:0px; left:0px; width:200px; height:200px;  opacity: 0;
+	-webkit-border-radius:100em;-moz-border-radius:100em;-o-border-radius:100em;border-radius:100em; background:#fff;
+	-webkit-animation: ball-scale-multiple 3s 0s linear infinite;
+    animation: ball-scale-multiple 3s 0s linear infinite;
+}
+.kr-round-ani b{width:8px; height:8px; -webkit-border-radius:100em;-moz-border-radius:100em;-o-border-radius:100em;border-radius:100em; background:#fff; position:absolute; top:19px; left:15px; z-index:99;}
+
+@keyframes ball-scale-multiple {
+	0% {
+		width:5px;
+		height:5px;
+		opacity: 0; 
+	}
+	50% {
+		opacity: 0.3; 
+	}
+	100% {
+		width:200px;
+		height:200px;
+		opacity: 0; 
+	} 
+}
+
+.global-more-btn{float:right; width:28%; max-width:143px; height:46px; border:1px solid #fff; text-align:center; line-height:46px; color:#fff; opacity:0.6;filter:Alpha(opacity=60);}
+.global-more-btn:hover{opacity:1.0;filter:Alpha(opacity=100);background-color:#fff; color:#242a33}
+/* 메인 :: 투자정보 */
+#mainBoardCon{overflow:hidden; position:relative; width:100%; padding:76px 0; background-color:#0060a1;}
+#mainInvestCon .content-tit{color:#fff; padding-bottom:20px;}
+.main-invest-news-inner-con{width:300px; padding-right:28px;}
+.main-invest-con{padding-bottom:65px}
+.content-sub-tit{color:#fff; opacity:0.6;filter:Alpha(opacity=60); line-height:22px;}
+.main-invest-list{padding:30px 0;}
+.main-invest-list .invest-price{color:#fff; font-size:36px; letter-spacing:-0.75px; font-weight:300;}
+.main-invest-list .invest-price span{font-size:20px;}
+.main-invest-list .invest-price strong{font-weight:500; font-size:48px; margin-right:10px;}
+.main-invest-list .invest-info{overflow:hidden; padding:15px 0 25px;}
+.main-invest-list .invest-info dl{float:left; width:50%; font-size:18px; font-weight:300;}
+.main-invest-list .invest-info dl dt,.main-invest-list .invest-info dl dd{display:inline-block; color:#fff; opacity:0.7;filter:Alpha(opacity=70);} 
+.main-invest-list .invest-more-btn{display:block; height:44px; border:1px solid #5293bf; background-color:#00558e; line-height:44px ; text-align:center; color:#fff; opacity:0.8;filter:Alpha(opacity=80); font-size:15px;}
+.main-invest-list .invest-more-btn:hover{background-color:#fff; color:#00558e; opacity:1.0;filter:Alpha(opacity=100);}
+/* 메인 :: 성도뉴스 */
+.main-news-list{position:relative;}
+.main-news-list ul{height:100px;}
+.main-news-list ul li{position:relative; padding-left:10px; margin-bottom:15px;}
+.main-news-list ul li a{display:block; overflow:hidden; white-space:nowrap; text-overflow:ellipsis; color:#fff; opacity:0.7;filter:Alpha(opacity=70);}
+.main-news-list ul li a:before{display:block; content:""; position:absolute; top:5px; left:0px; width:4px; height:4px; background-color:#fff; border-radius:4px;}
+.news-more-btn{position:absolute; top:-42px; right:0px;}
+.news-more-btn img{width:15px;}
+/* 메인 :: 보도자료 */
+#mainPressCon{position:absolute; top:0px; left:50%; width:100%; margin-left:-272px; background-color:#f0f0f0; height:100%;}
+.main-press-inner-con{padding:76px 43px;  width:829px;}
+#csPressList{position:relative; padding-bottom:60px;}
+#csPressList ul{overflow:hidden; height:274px}
+#csPressList ul li{float:left; width:32%; margin-left:2%; margin-bottom:2%;}
+#csPressList ul li:first-child{margin-left:0%;}
+#csPressList ul li a{position:relative; display:block; padding: 22px 5% 60px; border:1px solid #aeaeae; background-color:#fff; letter-spacing:-0.75px; line-height:22px;}
+#csPressList ul li a .press-cate{display:inline-block; width:80px; height:26px; line-height:26px; background-color:#0060a1; border-top:1px solid #0060a1; border-bottom:1px solid #0060a1; color:#fff; font-size:13px; text-align:center; }
+#csPressList ul li a strong,#csPressList ul li a span{display:block;}
+#csPressList ul li a .press-tit{display:block; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; padding:24px 0 33px; color:#4c4c4c; font-size:18px; font-weight:400; 
+	-webkit-transition:all 0.4s;-moz-transition:all 0.4s;-o-transition:all 0.4s;-ms-transition:all 0.4s;transition:all 0.4s
+	}
+#csPressList ul li a .press-content{overflow:hidden; height:66px; color:#6e6e6e; font-size:13.2px; font-weight:300; }
+#csPressList ul li a .more-btn{position:absolute; bottom:20px; left:5%; width:15px; height:15px; background:url(/images/button/more_btn_black.png) no-repeat;
+	-webkit-transition:all 0.4s 0.1s;-moz-transition:all 0.4s 0.1s;-o-transition:all 0.4s 0.1s;-ms-transition:all 0.4s 0.1s;transition:all 0.4s 0.1s;
+}
+#csPressList ul li a:hover .more-btn{ transform:rotate(90deg);  -moz-transform:rotate(90deg); background-image:url(/images/button/more_btn_white_small.png); background-size:15px 15px }
+#csPressList ul li a:hover{background-color:#0060a1}
+#csPressList ul li a:hover .press-cate{border-color:#5494c0;}
+#csPressList ul li a:hover .press-tit{color:#fff;}
+#csPressList ul li a:hover .press-content{color:#fff; opacity:0.45;filter:Alpha(opacity=45);}
+.press-more-btn{display:none;}
+/* 메인 :: 퀵링크 */
+#mainQuickLink ul{overflow:hidden;} 
+#mainQuickLink ul li{position:relative; float:left; width:32%; margin-left:2%;}
+#mainQuickLink ul li:first-child{margin-left:0;}
+#mainQuickLink ul li a{display:block; padding-left:95px;}
+#mainQuickLink ul li.quick-link1 a{background:url(/images/icon/quick_link1.jpg) no-repeat 0 50%}
+#mainQuickLink ul li.quick-link2 a{background:url(/images/icon/quick_link2.jpg) no-repeat 0 50%}
+#mainQuickLink ul li.quick-link3 a{background:url(/images/icon/quick_link3.jpg) no-repeat 0 50%}
+#mainQuickLink ul li strong{display:block; padding-bottom:15px; font-size:18px; letter-spacing:-0.25px; color:#222; font-weight:400;}
+#mainQuickLink ul li p{color:#6e6e6e; font-size:14px; line-height:22px;}
+
+@media all and (max-width:1220px){
+	#mainContainer{padding-top:50px;}
+	/* 메인 :: 오른쪽바 */
+	#rightBar{display:none;}
+	/* 메인 :: 사업 종류 */
+	#businessList{width:96%; margin:0px auto;}
+	/* 메인 :: 사업 링크 */
+	#businessResultLink{padding:0; width:96%; margin:0px auto;}
+	#businessResultLink h3{line-height:52px; font-size:34px;}
+	#businessResultLink .result-link-list li{height:54px;}
+	#businessResultLink .result-link-list li a{ font-size:16px; line-height:52px;}
+	/* 메인 :: 네트워크 */
+	#mainNetworkCon{padding:30px 0 0 0; background:#fff;}
+	#mainNetworkCon .content-tit{width:96%; margin:0px auto;}
+	.global-list-con{display:none;}
+	/* 메인 :: 글로벌 맵 */
+	#mainGlobalMapCon{position:static; margin-left:0;}
+	#globalMapInner{padding:45px 2%; width:96%;}
+	/* 메인 :: 투자정보 */
+	#mainBoardCon{padding:0; background-color:#f0f0f0;}
+	#mainInvestCon{float:left; width:50%; background-color:#0060a1 }
+	.main-invest-news-inner-con{width:100%; padding-right:0;}
+	.main-invest-con{position:relative; width:88%; padding:40px 6%; border-bottom:1px solid #3184bc}
+	.content-sub-tit{display:none;}
+	.main-invest-list{padding:0;}
+	/* 메인 :: 성도뉴스 */
+	#csPressList .content-tit{padding-bottom:0;}
+	.main-news-con{width:88%; padding:40px 6%;}
+	.main-news-list ul{display:none;}
+	.news-more-btn{top:-31px; width:29px; height:29px; padding:2px; background:rgba(0,0,0,0.5);} 
+	.news-more-btn img{width:100%; vertical-align:top;}
+	/* 메인 :: 보도자료 */
+	#mainPressCon{position:static; margin-left:0; float:left; width:50%;}
+	.main-press-inner-con{width:100%; padding:0;}
+	#csPressList{width:88%; padding:40px 6%;}
+	.main-news-con .content-tit{padding-bottom:0 !important;}
+	#csPressList ul{display:none;}
+	.press-more-btn{display:block;position:absolute; top:35px; right:6%; width:29px; height:29px; padding:2px;  background:rgba(0,0,0,0.5)}
+	.press-more-btn img{width:100%; vertical-align:top;}
+	#mainQuickLink ul li{float:none; width:100%; height:92.6px; border-bottom:1px solid #cacaca; margin-left:0}
+	#mainQuickLink ul li:first-child{border-top:1px solid #cacaca;}
+	#mainQuickLink ul li a{display:block; height:100%; line-height:100px; padding:0 6%; background-position:6% 50% !important; text-align:right;}
+	#mainQuickLink ul li p{display:none;}
+	#mainQuickLink ul li strong{padding-bottom:0;}
+}
+@media all and (max-width:768px){
+	/* 메인 비주얼 */
+	#mainVisual{position:relative; }
+	/*#mainVisual .visual-item{position:absolute; left:50%; width:724px !important; margin-left:-362px;}
+	#mainVisual  .slick-track{height:350px !important;}*/
+	#mainVisual .scroll-icon{display:none;}
+	#mainVisual .visual-txt{bottom:15%;}
+	#mainVisual .visual-inner-txt{border-left:0; padding-bottom:0; padding-left:0;}
+	#mainVisual .visual-inner-txt p,#mainVisual .visual-inner-txt span,#mainVisual .visual-txt a,#mainVisual .visual-inner-txt strong{display:none;}
+	#mainVisual .visual-inner-txt h2 img{height:20px;}
+	#mainVisual .visual-inner-txt strong{padding:10px 0; font-size:14px;}
+	#mainVisual .slick-arrow{
+		bottom:auto; top:50%;  margin-bottom:0px; margin-top:-20px; width:40px; height:40px; left:0; background-size:40px 40px !important;
+	}
+	#mainVisual .slick-arrow.slick-next{margin-left:0; left:auto; right:0;}
+	#mainContainer{padding-top:42px;}
+	/* 메인 :: 사업 종류 */
+	#mainBusinessCon{position:relative;margin-bottom:3%; }
+	#businessList ul{padding:0;}
+	#businessList ul li{position:relative; margin-left:0; width:48%; margin:2% 1% 0 1% !important; top:0; opacity:1.0;filter:Alpha(opacity=100);}
+	/*#businessList ul li.even-item{margin:2% 0 0 1%;}*/
+	#businessList ul li a{position:relative; overflow:hidden; padding-top:70%; background-size:cover !important;}
+	#businessList ul li .bg-thum img{top:-100%; width:100%; height:auto; display:none;}
+	#businessList ul li .business-tit{top:7%;}
+	#businessList ul li .business-tit span{display:none;}
+	/* 메인 :: 사업 링크 */
+	/*#businessResultLink{position:absolute; bottom:1px; right:2.5%; width:47%; height:28.6%; padding-bottom:0;}*/
+	#businessResultLink{width:94%; padding:10px 3%;}
+	#businessResultLink h3{display:none;}
+	#businessResultLink .result-link-list{width:100%; float:none;}
+	#businessResultLink .result-link-list li{height:auto;}
+	#businessResultLink .result-link-list li a{display:table; width:100%; padding:15px 0; height:20px; line-height:initial}
+	#businessResultLink .result-link-list li span{display:table-cell; width:100%; vertical-align:middle;}
+	/*#businessResultLink .result-link-list{float:none; width:100%; height:100%; border:1px solid #d0d0d0;}
+	#businessResultLink .result-link-list li{float:none; width:100%; height:33.3%; box-sizing:border-box;  border-bottom:1px solid #d0d0d0; background-color:#f2f2f2;  margin:0 !important; text-align:left}
+	#businessResultLink .result-link-list li a{display:table; width:96%; vertical-align:middle; border:0; border-top:1px solid #fff;padding:0 2% ; line-height:initial; height:100%; background:url(/images/icon/quick_arrow.jpg) no-repeat 95% 50%;}
+	#businessResultLink .result-link-list li a:hover{border-top-color:#fff !important;}
+	#businessResultLink .result-link-list li a span{display:table-cell; vertical-align:middle; height:100%;}
+	#businessResultLink .result-link-list li:first-child{height:33.4%}
+	#businessResultLink .result-link-list li:last-child{border-bottom:0;}
+	#businessResultLink .result-link-list li:first-child a{border-top:0;}
+	*/
+	/* 메인 :: 글로벌 */
+	
+	.pc-img,.map-kr-marker{display:none;}
+	.mobile-img{display:block;}
+}
+@media all and (max-width:640px){
+	/* 메인 컨텐츠 공통 */
+	.content-tit{font-size:16px; padding-bottom:20px;}
+	/* 메인 :: 사업 링크 */
+	#businessResultLink{height:27%}
+	#businessResultLink .result-link-list li a{font-size:12px;}
+	/* 메인 :: 글로벌 맵 */
+	.map-inner-top h3{padding-bottom:16px; margin-bottom:20px;}
+	.map-inner-top h3 strong{font-size:20px;}
+	.map-inner-top h3 span{font-size:10px;}
+	.map-inner-txt{font-size:10px; line-height:18px;}
+	.global-more-btn{height:28px; line-height:28px; font-size:12px;}
+	.map-inner-content img{max-width:100%;}
+	/* 메인 :: 투자정보 */
+	.main-invest-con,.main-news-con,#csPressList{padding:18px 6%;}
+	.main-invest-list .invest-price{font-size:18px;}
+	.main-invest-list .invest-price strong{font-size:24px;}
+	.main-invest-list .invest-price span{font-size:11px;}
+	.main-invest-list .invest-info dl{font-size:12px;}
+	.main-invest-list .invest-more-btn{height:33px; line-height:33px; font-size:12px;}
+	.news-more-btn{top:-20px; width:18px; height:18px; } 
+	/* 메인 :: 보도자료 */
+	.press-more-btn{ top:15px; width:18px; height:18px;}
+	#mainQuickLink ul li{height:60px;}
+	#mainQuickLink ul li a{line-height:60px; background-size:auto 42px !important;  }
+	#mainQuickLink ul li strong{font-size:13px;}
+
+}
+@media all and (max-width:360px){
+	#businessResultLink .result-link-list li a{height:38px; word-break:keep-all;}
+}
