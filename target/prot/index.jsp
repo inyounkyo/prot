@@ -35,12 +35,12 @@
     <link rel="stylesheet" href="/resources/css/main.css">
     <link rel="stylesheet" href="/resources/css/content.css">
     <link rel="stylesheet" href="/resources/css/addition.css">
-    <link href="/resources/icon" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <!--[if lt IE 9]>
     <script src="http://www.sungdokorea.com/js/vendor/html5shiv.js"></script>
     <script src="http://www.sungdokorea.com/js/vendor/respond.min.js"></script>
     <![endif]-->
-    <script src="/resources/jquery.min.js"></script>
+    <script src="/resources/js/jquery.min.js"></script>
     <script>window.jQuery || document.write('<script src="http://www.sungdokorea.com/js/vendor/jquery-1.8.3.min.js"><\/script>')</script>
     <script src="/resources/js/jquery.easing.1.3.js"></script>
     <script src="/resources/js/common.js"></script>
@@ -236,7 +236,7 @@
         <section id="mainVisual">
             <div class="visual-img slick-initialized slick-slider"><button type="button" data-role="none" class="slick-prev slick-arrow" aria-label="Previous" role="button" style="display: block;">Previous</button>
                 <div aria-live="polite" class="slick-list draggable"><div class="slick-track" role="listbox" style="opacity: 1; width: 5052px;"><div class="visual-item slick-slide" data-slick-index="0" aria-hidden="true" tabindex="-1" role="option" style="width: 1263px; position: relative; left: 0px; top: 0px; z-index: 998; opacity: 0; transition: opacity 500ms ease;">
-                    <img src="/resources/images/main_visual_03" alt="">
+                    <img src="/resources/images/main_visual_03.jpg" alt="">
                     <div class="visual-txt">
                         <div class="visual-inner-txt">
                             <h2><img src="/resources/images/main_visual_txt3.png" alt="고객과 함께 성장하는 동반자"></h2>
@@ -248,7 +248,7 @@
                         <a href="http://www.sungdokorea.com/kr/business/building.php" tabindex="-1">MORE View</a>
                     </div>
                 </div><div class="visual-item slick-slide" data-slick-index="1" aria-hidden="true" tabindex="-1" role="option" style="width: 1263px; position: relative; left: -1263px; top: 0px; z-index: 998; opacity: 0; transition: opacity 500ms ease;">
-                    <img src="/resources/images/main_visual_02_2" alt="">
+                    <img src="/resources/images/main_visual_02_2.jpg" alt="">
                     <div class="visual-txt">
                         <div class="visual-inner-txt">
                             <h2><img src="/resources/images/main_visual_txt2.png" alt="품질안전 우선주의 기업"></h2>
@@ -261,7 +261,7 @@
                         <a href="http://www.sungdokorea.com/kr/business/building.php" tabindex="-1">MORE View</a>
                     </div>
                 </div><div class="visual-item slick-slide slick-current slick-active active" data-slick-index="2" aria-hidden="false" tabindex="-1" role="option" style="width: 1263px; position: relative; left: -2526px; top: 0px; z-index: 999; opacity: 1;">
-                    <img src="/resources/images/main_visual_01" alt="">
+                    <img src="/resources/images/main_visual_01.jpg" alt="">
                     <div class="visual-txt">
                         <div class="visual-inner-txt">
                             <h2><img src="/resources/images/main_visual_txt1.png" alt="미래를 선도하는 기업"></h2>
@@ -273,7 +273,7 @@
                         <a href="http://www.sungdokorea.com/kr/business/building.php" tabindex="0">MORE View</a>
                     </div>
                 </div><div class="visual-item slick-slide" data-slick-index="3" aria-hidden="true" tabindex="-1" role="option" style="width: 1263px; position: relative; left: -3789px; top: 0px; z-index: 998; opacity: 0;">
-                    <img src="/resources/images/main_visual_01_2" alt="">
+                    <img src="/resources/images/main_visual_01_2.jpg" alt="">
                     <div class="visual-txt">
                         <div class="visual-inner-txt">
                             <h2><img src="/resources/images/main_visual_txt1.png" alt="미래를 선도하는 기업"></h2>
@@ -300,36 +300,29 @@
                 <div id="businessList">
                     <ul class="scroll-fade">
                         <li style="transition-delay:0.1s">
-                            <a href="http://www.sungdokorea.com/kr/business/building.php" style="background:url(/images/main/main_business_01_m) no-repeat 50% 50%;">
-                                <span class="bg-thum"><img src="/resources/images/main_business_01" alt=""></span>
+                            <a href="http://www.sungdokorea.com/kr/business/building.php" style="background:url(/resources/images/main/main_business_01_m.jpg) no-repeat 50% 50%;">
+                                <span class="bg-thum"><img src="/resources/images/main_business_01.jpg" alt=""></span>
                                 <p class="business-tit"><span class="font-nanum">General Construction Business</span><strong class="font-nanumbarun">종합건설사업</strong></p>
                                 <span class="over-cover"><img src="/resources/images/more_btn_white.png" alt=""></span>
                             </a>
                         </li>
                         <li class="even-item" style="transition-delay:0.2s">
-                            <a href="http://www.sungdokorea.com/kr/business/cleanroom.php" style="background:url(/images/main/main_business_02_m) no-repeat 50% 50%;">
-                                <span class="bg-thum"><img src="/resources/images/main_business_02" alt=""></span>
+                            <a href="http://www.sungdokorea.com/kr/business/cleanroom.php" style="background:url(/resources/images/main/main_business_02_m.jpg) no-repeat 50% 50%;">
+                                <span class="bg-thum"><img src="/resources/images/main_business_02.jpg" alt=""></span>
                                 <p class="business-tit"><span class="font-nanum">Semiconductor &amp; Display Project</span><strong class="font-nanumbarun">크린룸</strong></p>
                                 <span class="over-cover"><img src="/resources/images/more_btn_white.png" alt=""></span>
                             </a>
                         </li>
-                        <!-- <li style="transition-delay:0.3s">
-                            <a href="http://www.sungdokorea.com/kr/business/cleanroom.php" style="background:url(/images/main/main_business_03_m) no-repeat 50% 50%;">
-                                <span class="bg-thum"><img src="http://www.sungdokorea.com/images/main/main_business_03" alt="" /></span>
-                                <p class="business-tit"><span class="font-nanum">Building Mechanical Project</span><strong class="font-nanumbarun">건축설비</strong></p>
-                                <span class="over-cover"><img src="http://www.sungdokorea.com/images/button/more_btn_white.png" alt="" /></span>
-                            </a>
-                        </li> -->
                         <li class="even-item" style="transition-delay:0.3s">
-                            <a href="http://www.sungdokorea.com/kr/business/plant.php" style="background:url(/images/main/main_business_04_m) no-repeat 50% 50%;">
-                                <span class="bg-thum"><img src="/resources/images/main_business_04" alt=""></span>
+                            <a href="http://www.sungdokorea.com/kr/business/plant.php" style="background:url(/resources/images/main/main_business_04_m.jpg) no-repeat 50% 50%;">
+                                <span class="bg-thum"><img src="/resources/images/main_business_04.jpg" alt=""></span>
                                 <p class="business-tit"><span class="font-nanum">Plant</span><strong class="font-nanumbarun">플랜트</strong></p>
                                 <span class="over-cover"><img src="/resources/images/more_btn_white.png" alt=""></span>
                             </a>
                         </li>
                         <li style="transition-delay:0.4s">
-                            <a href="http://www.sungdokorea.com/kr/business/newtown.php" style="background:url(/images/main/main_business_05_m) no-repeat 50% 50%;">
-                                <span class="bg-thum"><img src="/resources/images/main_business_05" alt=""></span>
+                            <a href="http://www.sungdokorea.com/kr/business/newtown.php" style="background:url(/resources/images/main/main_business_05_m.jpg) no-repeat 50% 50%;">
+                                <span class="bg-thum"><img src="/resources/images/main_business_05.jpg" alt=""></span>
                                 <p class="business-tit"><span class="font-nanum">Overseas Real Estate Development </span><strong class="font-nanumbarun">신도시개발사업</strong></p>
                                 <span class="over-cover"><img src="/resources/images/more_btn_white.png" alt=""></span>
                             </a>
@@ -453,7 +446,7 @@
                             <ul>
                                 <li><a href="http://www.sungdokorea.com/kr/customer/news.php?bgu=view&amp;bbs_data=aWR4PTIwJnN0YXJ0UGFnZT0mbGlzdE5vPSZ0YWJsZT0mY29kZT10YWI1X2MxJnNlYXJjaF9pdGVtPSZzZWFyY2hfb3JkZXI9||">홈페이지 리뉴얼</a></li>
                             </ul>
-                            <a href="http://www.sungdokorea.com/kr/customer/news.php" class="news-more-btn"><img src="/resources/more_btn_white.png" alt="더보기" style="opacity:0.7;filter:Alpha(opacity=70);"></a>
+                            <a href="http://www.sungdokorea.com/kr/customer/news.php" class="news-more-btn"><img src="/resources/images/more_btn_white.png" alt="더보기" style="opacity:0.7;filter:Alpha(opacity=70);"></a>
                         </div>
                     </div>
                     </div>
