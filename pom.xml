@@ -16,6 +16,9 @@
     <version.h2>1.4.191</version.h2>
     <version.mybatis>3.3.1</version.mybatis>
     <version.mybatis.spring>1.2.5</version.mybatis.spring>
+
+    <version.aop>4.2.5.RELEASE</version.aop>
+    <version.aspectjrt>1.7.3</version.aspectjrt>
   </properties>
 
   <dependencies>
@@ -71,6 +74,28 @@
       <groupId>org.springframework</groupId>
       <artifactId>spring-jdbc</artifactId>
       <version>${version.springframework}</version>
+    </dependency>
+
+    <!-- Spring AOP + AspectJ -->
+    <dependency>
+      <groupId>org.springframework</groupId>
+      <artifactId>spring-aop</artifactId>
+      <version>${version.aop}</version>
+    </dependency>
+   <dependency>
+      <groupId>org.aspectj</groupId>
+      <artifactId>aspectjrt</artifactId>
+      <version>${version.aspectjrt}</version>
+    </dependency>
+    <dependency>
+      <groupId>org.aspectj</groupId>
+      <artifactId>aspectjweaver</artifactId>
+      <version>${version.aspectjrt}</version>
+    </dependency>
+    <dependency>
+      <groupId>org.aspectj</groupId>
+      <artifactId>aspectjtools</artifactId>
+      <version>${version.aspectjrt}</version>
     </dependency>
 
     <!-- MyBatis -->

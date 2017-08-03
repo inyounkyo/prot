@@ -6,5 +6,6 @@
 >
      
     <beans:import resource="context-common.xml" />
+    <beans:import resource="context-aspect.xml" />
 
 </beans:beans>
