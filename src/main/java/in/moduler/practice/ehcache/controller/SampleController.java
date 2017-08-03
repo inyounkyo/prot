@@ -1,7 +1,11 @@
 package in.moduler.practice.ehcache.controller;
 
 import in.moduler.practice.ehcache.service.SampleService;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.cache.Cache;
+import org.springframework.cache.ehcache.EhCacheCacheManager;
 import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -17,8 +21,13 @@ import java.util.Map;
 @RestController
 public class SampleController {
 
+    private final Logger logger = LoggerFactory.getLogger(this.getClass());
+
     @Autowired
     private SampleService service;
+
+    @Autowired
+    private EhCacheCacheManager cacheManager;
 
     /**
      * Get Non-Cached Data From ServiceLayer Generated
@@ -36,6 +45,8 @@ public class SampleController {
         return service.getNormalDataNonCaching(param);
     }
 
+
+
     /**
      * Get Cached Data From ServiceLayer Generated
      *
@@ -48,8 +59,17 @@ public class SampleController {
             produces = MediaType.APPLICATION_JSON_UTF8_VALUE
     )
     public Map getNormalCache(@RequestParam(value = "param", required = true) String param) {
+        Map<String, Object> c = service.getNormalDataCaching(param);
+        //logger.info("Ctrll Cach:::", c);
+        //logger.debug("Ctrll Cach de:::", c);
+        //System.out.println("systepint:: "+c);
 
-        return service.getNormalDataCaching(param);
+        Cache cache =  cacheManager.getCache("normal");
+        Cache.ValueWrapper element =  cache.get("a12");
+        Map<String, Object> cMap =  (Map<String, Object>)element.get();
+        System.out.println("longlonglonglong:: "+ cMap.get("long"));
+
+        return c;
     }
 
     /**

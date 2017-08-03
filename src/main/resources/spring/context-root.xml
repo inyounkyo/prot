@@ -6,6 +6,5 @@
 >
      
     <beans:import resource="context-common.xml" />
-    <!--<beans:import resource="context-persistence.xml" />-->
-     
+
 </beans:beans>
