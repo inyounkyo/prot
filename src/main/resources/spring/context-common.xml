@@ -13,18 +13,18 @@
 
     <context:annotation-config />
  
-    <context:component-scan base-package="in.moduler">
+    <context:component-scan base-package="in.moduler com.prot">
         <context:exclude-filter type="annotation" expression="org.springframework.stereotype.Controller" />
     </context:component-scan>
 
 
     <!-- Using Default Key Generator -->
     <cache:annotation-driven cache-manager="cacheManager" />
-    
+
     <!-- Using Custom Key Generator -->
     <!--<cache:annotation-driven cache-manager="cacheManager" key-generator="customKeyGenerator" />
     <bean id="customKeyGenerator" class="com.dwuthk.practice.ehcache.generator.CustomKeyGenerator" />-->
-    
+
     <bean id="cacheManager" class="org.springframework.cache.ehcache.EhCacheCacheManager">
         <property name="cacheManager">
             <bean class="org.springframework.cache.ehcache.EhCacheManagerFactoryBean">

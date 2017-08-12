@@ -19,13 +19,9 @@
  <bean id="loggerAspect" class="in.moduler.practice.aspect.aop.LoggingAspect" />
 
 <context:annotation-config />
-<context:component-scan base-package="com.prot">
+<context:component-scan base-package="in.moduler com.prot">
         <context:include-filter type="annotation" expression="org.springframework.stereotype.Controller"/>
         <context:exclude-filter type="annotation" expression="org.springframework.stereotype.Service"/>
-</context:component-scan>
-<context:component-scan base-package="in.moduler">
-    <context:include-filter type="annotation" expression="org.springframework.stereotype.Controller"/>
-    <context:exclude-filter type="annotation" expression="org.springframework.stereotype.Service"/>
 </context:component-scan>
 
 <bean id="viewResolver" class="org.springframework.web.servlet.view.InternalResourceViewResolver">
