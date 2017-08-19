@@ -5,6 +5,7 @@ package com.prot.web.controller;
  */
 
 
+import org.json.JSONObject;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.http.HttpRequest;
@@ -12,9 +13,11 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.ModelAndView;
 
 import javax.servlet.http.HttpServletRequest;
+import java.util.HashMap;
 import java.util.Map;
 
 
@@ -46,5 +49,19 @@ public class HelloWorldController {
         model.addAttribute("message", "User " + "kknd" + " deleted");
         return "summurya";
     }
+
+    @RequestMapping("/maptojson")
+    public  @ResponseBody String maptojson() {
+        Map<String, Object> data = new HashMap<String, Object>();
+        data.put( "name", "Mars" );
+        data.put( "age", 32 );
+        data.put( "city", "NY" );
+        JSONObject json = new JSONObject();
+        json.put( "j", data );
+        System.out.printf( "JSON[1]: %s", json.toString(1) );
+        System.out.printf( "JSON[2]: %s", json.toString(2) );
+        return json.toString(1) ;
+    }
+
 
 }
