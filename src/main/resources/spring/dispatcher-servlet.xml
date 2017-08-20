@@ -15,8 +15,10 @@
         http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-4.2.xsd
 ">
 
-     <aop:aspectj-autoproxy/>
-     <bean id="loggerAspect" class="in.moduler.practice.aspect.aop.LoggingAspect" />
+    <aop:aspectj-autoproxy/>
+    <bean id="loggerAspect" class="in.moduler.practice.aspect.aop.LoggingAspect" />
+
+    <bean id="multipartResolver" class="org.springframework.web.multipart.support.StandardServletMultipartResolver"/>
 
     <context:annotation-config />
     <context:component-scan base-package="in.moduler com.prot">
